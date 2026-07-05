@@ -17,6 +17,15 @@ function Navbar({ whatsappHref }) {
     setScrolled(latest > 12)
   })
 
+  function handleMobileNav(e, href) {
+    e.preventDefault()
+    setMenuOpen(false)
+    setTimeout(() => {
+      const id = href.replace('#', '')
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 320)
+  }
+
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-[100] bg-bp-cream"
@@ -76,8 +85,8 @@ function Navbar({ whatsappHref }) {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
                     className="block py-1"
+                    onClick={(e) => handleMobileNav(e, link.href)}
                   >
                     {link.label}
                   </a>
