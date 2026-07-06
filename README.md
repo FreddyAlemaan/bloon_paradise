@@ -49,8 +49,3 @@ src/
 
 ---
 
-## Contacto
-
-- Instagram: [@phoenix_petals24](https://www.instagram.com/phoenix_petals24?igsh=MWVmeXRoNGF0N2dreg==)
-- WhatsApp: +351 935 882 405
-- Ubicación: Madeira, Portugal
